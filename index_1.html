@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Nadia Tasnim Ahmed, PhD — Analytical Scientist & Research Scientist at Charles River Laboratories. Expert in LC-MS/MS, bioanalytical method development, proteomics, and oligonucleotide analysis."/>
+<title>Nadia Tasnim Ahmed, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ── THEME TOKENS ── */
+[data-theme="dark"]{
+  --bg:#080c14;--bg2:#0d1420;--bg3:#121b2e;--surface:#182236;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+  --text:#eef0f4;--muted:#7a8ba8;--faint:#3d4f66;
+  --gold:#c8a96e;--gold2:#e0c898;--teal:#3ecfbf;--accent:#4a8fff;
+  --shadow:rgba(0,0,0,0.5);
+}
+[data-theme="light"]{
+  --bg:#f7f5f0;--bg2:#ffffff;--bg3:#edeae3;--surface:#ffffff;
+  --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.15);
+  --text:#1a1a2e;--muted:#5a6478;--faint:#c8c4ba;
+  --gold:#9a6f2a;--gold2:#b8882e;--teal:#1a9e92;--accent:#2563eb;
+  --shadow:rgba(0,0,0,0.08);
+}
+@media(prefers-color-scheme:dark){[data-theme="auto"]{
+  --bg:#080c14;--bg2:#0d1420;--bg3:#121b2e;--surface:#182236;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+  --text:#eef0f4;--muted:#7a8ba8;--faint:#3d4f66;
+  --gold:#c8a96e;--gold2:#e0c898;--teal:#3ecfbf;--accent:#4a8fff;
+  --shadow:rgba(0,0,0,0.5);
+}}
+@media(prefers-color-scheme:light){[data-theme="auto"]{
+  --bg:#f7f5f0;--bg2:#ffffff;--bg3:#edeae3;--surface:#ffffff;
+  --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.15);
+  --text:#1a1a2e;--muted:#5a6478;--faint:#c8c4ba;
+  --gold:#9a6f2a;--gold2:#b8882e;--teal:#1a9e92;--accent:#2563eb;
+  --shadow:rgba(0,0,0,0.08);
+}}
+
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Inter",sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden;transition:background 0.3s,color 0.3s}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:62px;background:rgba(var(--bg-raw,8,12,20),0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background 0.3s}
+[data-theme="light"] nav,[data-theme="auto"] nav{background:rgba(247,245,240,0.9)}
+.nav-logo{font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:600;color:var(--gold);text-decoration:none;letter-spacing:0.01em;white-space:nowrap}
+.nav-center{display:flex;gap:1.75rem;list-style:none}
+.nav-center a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;padding:4px 0;border-bottom:1px solid transparent}
+.nav-center a:hover,.nav-center a.active{color:var(--text);border-bottom-color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:0.75rem}
+
+/* Theme switcher */
+.theme-switcher{display:flex;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:3px;gap:2px}
+.theme-btn{background:none;border:none;cursor:pointer;padding:4px 10px;border-radius:15px;font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);transition:background 0.2s,color 0.2s;letter-spacing:0.05em}
+.theme-btn.active{background:var(--gold);color:#fff}
+[data-theme="light"] .theme-btn.active{color:#1a1a2e}
+
+.nav-cv{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:7px 16px;border:1px solid var(--gold);color:var(--gold);border-radius:2px;transition:background 0.2s,color 0.2s;white-space:nowrap}
+.nav-cv:hover{background:var(--gold);color:var(--bg)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 380px;align-items:center;gap:4rem;padding:8rem 3rem 4rem;position:relative;overflow:hidden;max-width:1200px;margin:0 auto}
+.hero-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.hero-bg-circle{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.12}
+.hero-bg-c1{width:600px;height:600px;background:var(--gold);top:-200px;right:-100px}
+.hero-bg-c2{width:400px;height:400px;background:var(--teal);bottom:100px;left:-100px;opacity:0.07}
+
+.hero-left{position:relative;z-index:1}
+.status-pill{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border:1px solid rgba(62,207,191,0.3);background:rgba(62,207,191,0.06);border-radius:20px;margin-bottom:1.5rem}
+.status-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.85)}}
+.status-text{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--teal);letter-spacing:0.1em;text-transform:uppercase}
+
+h1.name{font-family:"Cormorant Garamond",serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:600;line-height:1.05;color:var(--text);margin-bottom:0.3rem}
+h1.name .credential{font-size:0.38em;font-family:"JetBrains Mono",monospace;font-weight:400;color:var(--gold);vertical-align:super;letter-spacing:0.05em}
+.hero-role{font-size:14px;font-weight:500;color:var(--gold);letter-spacing:0.03em;margin-bottom:0.2rem}
+.hero-org{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:0.07em;margin-bottom:2rem}
+.hero-summary{font-size:14px;color:var(--muted);line-height:1.85;max-width:520px;margin-bottom:2.25rem}
+.hero-summary strong{color:var(--text);font-weight:500}
+
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:2rem}
+.htag{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);border:1px solid var(--border2);padding:4px 10px;border-radius:2px;letter-spacing:0.06em;transition:border-color 0.2s,color 0.2s}
+.htag:hover{border-color:var(--gold);color:var(--gold)}
+
+.hero-socials{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem}
+.soc{display:inline-flex;align-items:center;gap:6px;font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);border:1px solid var(--border);padding:6px 12px;text-decoration:none;border-radius:2px;transition:border-color 0.2s,color 0.2s;letter-spacing:0.06em}
+.soc:hover{border-color:var(--gold);color:var(--gold)}
+.soc svg{width:12px;height:12px;fill:currentColor;flex-shrink:0}
+
+.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--bg);font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:11px 24px;border-radius:2px;transition:opacity 0.2s;white-space:nowrap}
+.btn-primary:hover{opacity:0.85}
+.btn-secondary{border:1px solid var(--border2);color:var(--text);font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;padding:10px 24px;border-radius:2px;transition:border-color 0.2s,color 0.2s;white-space:nowrap}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+
+/* Hero right card */
+.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem}
+.profile-card{background:var(--bg2);border:1px solid var(--border2);border-radius:4px;overflow:hidden;box-shadow:0 24px 60px var(--shadow)}
+.profile-img{width:100%;aspect-ratio:1;object-fit:cover;object-position:top;display:block;filter:grayscale(10%)}
+.profile-img-placeholder{width:100%;aspect-ratio:1;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:5rem;color:var(--gold);border-bottom:1px solid var(--border)}
+.profile-info{padding:1.25rem 1.5rem}
+.profile-name-sm{font-family:"Cormorant Garamond",serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px}
+.profile-role-sm{font-size:11px;color:var(--muted);margin-bottom:0.75rem}
+.profile-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-top:1px solid var(--border)}
+.pstat{background:var(--bg2);padding:0.75rem 1rem;text-align:center}
+.pstat-num{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gold);line-height:1;display:block}
+.pstat-label{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;display:block;margin-top:2px}
+
+.interests-box{background:var(--bg2);border:1px solid var(--border2);border-radius:4px;padding:1.1rem 1.25rem}
+.ibox-label{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.6rem}
+.ibox-item{font-size:12px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.ibox-item:last-child{border-bottom:none;padding-bottom:0}
+.ibox-item::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* ── LAYOUT SHELL ── */
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 3rem}
+
+/* ── SECTION ── */
+section{padding:5rem 0;border-top:1px solid var(--border)}
+.sec-header{margin-bottom:2.5rem}
+.sec-eyebrow{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.5rem}
+.sec-title{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:600;color:var(--text);line-height:1.1}
+
+/* ── EXPERIENCE TIMELINE ── */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),transparent)}
+.tl-item{position:relative;padding:0 0 2.5rem 2rem;margin-left:0}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-2rem;top:4px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);transform:translateX(-4px)}
+.tl-item.current .tl-dot{background:var(--gold)}
+.tl-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:0.5rem}
+.tl-period{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:0.06em}
+.tl-org{font-size:12px;color:var(--muted)}
+.tl-loc{font-size:11px;color:var(--faint)}
+.tl-badge{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--teal);border:1px solid rgba(62,207,191,0.35);padding:2px 8px;border-radius:10px;letter-spacing:0.08em}
+.tl-role{font-size:15px;font-weight:600;color:var(--text);margin-bottom:0.6rem;line-height:1.3}
+.tl-bullets{list-style:none;display:flex;flex-direction:column;gap:4px}
+.tl-bullets li{font-size:13px;color:var(--muted);line-height:1.65;padding-left:1rem;position:relative}
+.tl-bullets li::before{content:"–";position:absolute;left:0;color:var(--faint)}
+
+/* ── EDU CARDS ── */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.edu-card{background:var(--bg2);padding:1.6rem;transition:background 0.2s}
+.edu-card:hover{background:var(--bg3)}
+.edu-badge{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--gold);letter-spacing:0.1em;border:1px solid rgba(200,169,110,0.3);padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:0.75rem}
+.edu-degree{font-family:"Cormorant Garamond",serif;font-size:1.05rem;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:0.3rem}
+.edu-field{font-size:12px;color:var(--gold);margin-bottom:0.25rem}
+.edu-school{font-size:12px;color:var(--muted)}
+.edu-gpa{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--teal);margin-top:0.5rem}
+.edu-note{font-size:11px;color:var(--muted);font-style:italic;margin-top:0.4rem;line-height:1.5}
+
+/* ── PUBLICATIONS ── */
+.pub-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.pub-item{padding:1.5rem 1.75rem;border-bottom:1px solid var(--border);background:var(--bg2);display:flex;gap:1.25rem;align-items:flex-start;transition:background 0.2s}
+.pub-item:last-child{border-bottom:none}
+.pub-item:hover{background:var(--bg3)}
+.pub-num{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--gold);min-width:28px;padding-top:2px;flex-shrink:0}
+.pub-body{flex:1}
+.pub-title{font-size:13px;font-weight:500;color:var(--text);line-height:1.55;margin-bottom:0.3rem}
+.pub-authors{font-size:11px;color:var(--muted);margin-bottom:0.2rem;line-height:1.5}
+.pub-journal{font-size:11px;color:var(--teal);font-style:italic;margin-bottom:0.4rem}
+.pub-tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:9px;padding:2px 7px;border-radius:2px;letter-spacing:0.06em;margin-right:6px}
+.pub-tag.submitted{background:rgba(74,143,255,0.12);color:var(--accent);border:1px solid rgba(74,143,255,0.25)}
+.pub-tag.published{background:rgba(62,207,191,0.1);color:var(--teal);border:1px solid rgba(62,207,191,0.25)}
+.pub-doi{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.2s}
+.pub-doi:hover{border-color:var(--gold)}
+
+/* ── PRESENTATIONS ── */
+.pres-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.pres-item{padding:1rem 1.5rem;border-bottom:1px solid var(--border);background:var(--bg2);display:flex;gap:1rem;align-items:flex-start;transition:background 0.2s}
+.pres-item:last-child{border-bottom:none}
+.pres-item:hover{background:var(--bg3)}
+.pres-year{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--gold);min-width:36px;flex-shrink:0;padding-top:2px}
+.pres-body{flex:1}
+.pres-title{font-size:13px;color:var(--text);font-weight:500;line-height:1.5;margin-bottom:2px}
+.pres-venue{font-size:11px;color:var(--muted)}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.5rem}
+.skill-group{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:1.4rem}
+.sg-title{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.9rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border)}
+.sg-tags{display:flex;flex-wrap:wrap;gap:5px}
+.sg-tag{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);border:1px solid var(--border);padding:3px 9px;border-radius:2px;transition:border-color 0.2s,color 0.2s;cursor:default;letter-spacing:0.03em}
+.sg-tag:hover{border-color:var(--gold);color:var(--text)}
+
+/* ── HONORS ── */
+.honors-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.honor-item{padding:1rem 1.5rem;border-bottom:1px solid var(--border);background:var(--bg2);display:flex;gap:1rem;align-items:center;transition:background 0.2s}
+.honor-item:last-child{border-bottom:none}
+.honor-item:hover{background:var(--bg3)}
+.honor-icon{width:28px;height:28px;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px}
+.honor-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:1px}
+.honor-org{font-size:11px;color:var(--muted)}
+
+/* ── LEADERSHIP ── */
+.lead-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.lead-card{background:var(--bg2);padding:1.25rem 1.5rem;transition:background 0.2s}
+.lead-card:hover{background:var(--bg3)}
+.lead-role{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px;line-height:1.4}
+.lead-org{font-size:11px;color:var(--muted)}
+.lead-period{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--gold);margin-top:4px}
+
+/* ── CONTACT ── */
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-heading{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:600;color:var(--text);line-height:1.1;margin-bottom:1rem}
+.contact-heading em{color:var(--gold);font-style:italic}
+.contact-intro{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
+.contact-items{display:flex;flex-direction:column;gap:0.75rem}
+.citem{display:flex;gap:0.75rem;align-items:flex-start;font-size:13px;color:var(--muted)}
+.citem a{color:var(--muted);text-decoration:none;transition:color 0.2s}
+.citem a:hover{color:var(--gold)}
+.clabel{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--gold);border:1px solid rgba(200,169,110,0.3);padding:3px 7px;border-radius:2px;flex-shrink:0;margin-top:1px;letter-spacing:0.07em;min-width:52px;text-align:center}
+
+.contact-form{display:flex;flex-direction:column;gap:0.9rem}
+.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+.fg{display:flex;flex-direction:column;gap:0.3rem}
+.fl{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase}
+.fi,.ft{background:var(--bg3);border:1px solid var(--border2);color:var(--text);font-family:"Inter",sans-serif;font-size:13px;padding:9px 12px;outline:none;transition:border-color 0.2s;width:100%;border-radius:2px}
+.fi:focus,.ft:focus{border-color:rgba(200,169,110,0.5)}
+.ft{min-height:100px;resize:vertical}
+.fsub{background:var(--gold);color:var(--bg);font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:11px 24px;border:none;border-radius:2px;cursor:pointer;transition:opacity 0.2s;align-self:flex-start}
+.fsub:hover{opacity:0.85}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto}
+.fc{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:0.05em}
+.fl-links{display:flex;gap:1.25rem}
+.fl-links a{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);text-decoration:none;transition:color 0.2s;letter-spacing:0.05em}
+.fl-links a:hover{color:var(--gold)}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ── MOBILE ── */
+@media(max-width:960px){
+  nav{padding:0 1.25rem}
+  .nav-center{display:none}
+  .hero{grid-template-columns:1fr;padding:7rem 1.25rem 3rem;gap:2.5rem;max-width:100%}
+  .hero-right{order:-1}
+  .profile-card{max-width:300px}
+  .page-wrap{padding:0 1.25rem}
+  .contact-layout{grid-template-columns:1fr;gap:2.5rem}
+  .form-2col{grid-template-columns:1fr}
+  footer{padding:1.5rem 1.25rem;flex-direction:column;gap:0.75rem;max-width:100%;text-align:center}
+  .timeline{padding-left:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BG -->
+<div class="hero-bg" aria-hidden="true">
+  <div class="hero-bg-circle hero-bg-c1"></div>
+  <div class="hero-bg-circle hero-bg-c2"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Nadia Tasnim Ahmed</a>
+  <ul class="nav-center">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#honors">Honors</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="theme-switcher" role="group" aria-label="Theme">
+      <button class="theme-btn" data-t="light" onclick="setTheme('light')">Light</button>
+      <button class="theme-btn active" data-t="dark" onclick="setTheme('dark')">Dark</button>
+      <button class="theme-btn" data-t="auto" onclick="setTheme('auto')">Auto</button>
+    </div>
+    <a href="uploads/2024_11_Academic CV_Nadia_v2.pdf" download class="nav-cv">CV</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1200px;margin:0 auto;padding:0 3rem">
+<section id="home" class="hero" style="border:none;padding-left:0;padding-right:0">
+  <div class="hero-left reveal">
+    <div class="status-pill">
+      <span class="status-dot"></span>
+      <span class="status-text">Research Scientist I &middot; Charles River Laboratories</span>
+    </div>
+    <h1 class="name">Nadia Tasnim Ahmed<span class="credential"> PhD</span></h1>
+    <div class="hero-role">Analytical Scientist &mdash; Bioanalytical Method Development</div>
+    <div class="hero-org">// Charles River Laboratories &middot; Ashland, Ohio</div>
+    <p class="hero-summary">
+      <strong>PhD in Pharmaceutical Engineering</strong> with 5+ years in LC-MS/MS and high-resolution mass spectrometry. Expert in <strong>bioanalytical method development and validation</strong> for small molecules, peptides, proteins, and oligonucleotides across regulated GLP environments. Former ORISE Fellow at the FDA/CDER.
+    </p>
+    <div class="hero-tags">
+      <span class="htag">LC-MS/MS</span>
+      <span class="htag">Bioanalytical Methods</span>
+      <span class="htag">Oligonucleotide Analysis</span>
+      <span class="htag">Proteomics</span>
+      <span class="htag">Ion Mobility-MS</span>
+      <span class="htag">GLP / GxP</span>
+      <span class="htag">FDA Regulatory</span>
+    </div>
+    <div class="hero-socials">
+      <a href="mailto:nadiatasnimahmed879@gmail.com" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Email
+      </a>
+      <a href="https://linkedin.com/in/nadia-tasnim-ahmed" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6.5v-7H9v7zm-1.25-8a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zM18 17h-2.5v-3.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5V17H10v-7h2.5v1.1c.46-.7 1.27-1.1 2-1.1 1.66 0 3 1.34 3 3V17z"/></svg>LinkedIn
+      </a>
+      <a href="https://github.com/ahmedn12" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7C6.73 19.91 6.14 18 6.14 18c-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.7.115 2.5.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>GitHub
+      </a>
+      <a href="https://scholar.google.com/citations?user=83E2y6QAAAAJ&hl=en&authuser=1" target="_blank" class="soc">
+        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-1 12.99L5 13.34V17l6 3.27L17 17v-3.66L11 15.99z"/></svg>Scholar
+      </a>
+      <a href="https://www.researchgate.net/profile/Nadia-Tasnim-Ahmed" target="_blank" class="soc">RG</a>
+    </div>
+    <div class="hero-actions">
+      <a href="#publications" class="btn-primary">View Publications &rarr;</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+
+  <div class="hero-right reveal" style="transition-delay:0.12s">
+    <div class="profile-card">
+      <img class="profile-img"
+        src="authors/admin/avatar_hu508d4cb0b84a545c02c5be5b1becfbf4_180801_270x270_fill_q75_lanczos_center.jpg"
+        alt="Nadia Tasnim Ahmed"
+        onerror="this.outerHTML='<div class=&quot;profile-img-placeholder&quot;>NTA</div>'"/>
+      <div class="profile-info">
+        <div class="profile-name-sm">Nadia Tasnim Ahmed, PhD</div>
+        <div class="profile-role-sm">Research Scientist I &middot; Charles River Laboratories</div>
+        <div class="profile-stats">
+          <div class="pstat"><span class="pstat-num">8+</span><span class="pstat-label">Publications</span></div>
+          <div class="pstat"><span class="pstat-num">7</span><span class="pstat-label">Conf. Talks</span></div>
+          <div class="pstat"><span class="pstat-num">12+</span><span class="pstat-label">Client Projects</span></div>
+          <div class="pstat"><span class="pstat-num">5+</span><span class="pstat-label">Yrs MS Exp.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="interests-box">
+      <div class="ibox-label">Research Interests</div>
+      <div class="ibox-item">LC-MS/MS Bioanalytical Methods</div>
+      <div class="ibox-item">Oligonucleotide Characterization</div>
+      <div class="ibox-item">Proteomics &amp; PTM Analysis</div>
+      <div class="ibox-item">Ion Mobility Mass Spectrometry</div>
+      <div class="ibox-item">Regulatory Method Validation</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="page-wrap">
+<section id="experience">
+  <div class="sec-header reveal">
+    <div class="sec-eyebrow">Experience</div>
+    <h2 class="sec-title">Career timeline</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-item current reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">
+        <span class="tl-period">Jun 2025 &ndash; Present</span>
+        <span class="tl-org">Charles River Laboratories</span>
+        <span class="tl-loc">Ashland, Ohio</span>
+        <span class="tl-badge">Current</span>
+      </div>
+      <div class="tl-role">Research Scientist I, Method Development</div>
+      <ul class="tl-bullets">
+        <li>Lead regulated LC-MS/MS bioanalytical method development and qualification for small and large molecule programs across plasma, serum, tissue, and whole blood matrices, supporting 12+ client-sponsored projects.</li>
+        <li>Collaborate with study directors, validation teams, and cross-functional stakeholders to design fit-for-purpose quantitative bioanalytical assays aligned with FDA, EMA, and ICH expectations.</li>
+        <li>Develop and optimize sample extraction strategies (PPT, SPE, LLE, affinity capture) to maximize assay sensitivity, recovery, robustness, and reproducibility.</li>
+        <li>Author method development reports, SOPs, and technical documentation supporting assay transfer, qualification, and validation in compliance with ALCOA+ data integrity standards.</li>
+      </ul>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">
+        <span class="tl-period">Nov 2024 &ndash; May 2025</span>
+        <span class="tl-org">Food and Drug Administration (FDA/CDER)</span>
+        <span class="tl-loc">St. Louis, Missouri</span>
+      </div>
+      <div class="tl-role">ORISE Fellow</div>
+      <ul class="tl-bullets">
+        <li>Developed high-resolution LC-MS/MS and ion mobility (HRIM-MS, Cyclic IMS-MS) methods for diastereomeric separation and characterization of synthetic oligonucleotides.</li>
+        <li>Conducted impurity profiling, structural elucidation, and degradation product assessment of oligonucleotide drug substances and products.</li>
+        <li>Authored method development reports and technical documentation following FDA quality and data integrity standards; collaborated with regulatory scientists to translate outcomes into practical analytical workflows.</li>
+      </ul>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">
+        <span class="tl-period">Aug 2020 &ndash; Nov 2024</span>
+        <span class="tl-org">Virginia Commonwealth University</span>
+        <span class="tl-loc">Richmond, Virginia</span>
+      </div>
+      <div class="tl-role">Graduate Assistant (RA &amp; TA) &mdash; Dept. of Pharmaceutics</div>
+      <ul class="tl-bullets">
+        <li>Led LC-MS/MS-based quantitative proteomic analysis of macrophages using Orbitrap Fusion Lumos and Q Exactive HFX, identifying key protein markers linked to lung inflammation.</li>
+        <li>Conducted peptide mapping, PTM analysis, and quantitative proteomics; applied bioinformatics and statistical approaches for pathway and genetic analysis.</li>
+        <li>Led projects on radioimmunotherapy for GBM and RNAi-based ADAR gene modulation for cancer immunotherapy, contributing to an NIH R35 grant proposal.</li>
+        <li>Designed &ldquo;PESC 709: Pharmaceutical Engineering Lab II&rdquo; course; developed syllabus, graded papers, and delivered 4 lectures for 12 graduate students.</li>
+      </ul>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">
+        <span class="tl-period">May 2024 &ndash; Sep 2024</span>
+        <span class="tl-org">Food and Drug Administration (FDA/CDER)</span>
+        <span class="tl-loc">St. Louis, Missouri</span>
+      </div>
+      <div class="tl-role">Summer ORISE Fellow</div>
+      <ul class="tl-bullets">
+        <li>Developed and validated a microchip-based CE&ndash;MS (ZipChip) method for high-throughput quantitative impurity analysis of synthetic oligonucleotides.</li>
+        <li>Authored SOPs and validation summaries; presented findings to FDA research and regulatory teams emphasizing applicability for routine QC and lot-release testing.</li>
+        <li>Completed FDA 101 training and a 2-month PBPK Modeling workshop (Dr. Raymond Yang).</li>
+      </ul>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">
+        <span class="tl-period">Dec 2019 &ndash; May 2020</span>
+        <span class="tl-org">University of South Florida</span>
+        <span class="tl-loc">Tampa, Florida</span>
+      </div>
+      <div class="tl-role">Research Assistant &mdash; Dept. of Internal Medicine</div>
+      <ul class="tl-bullets">
+        <li>Developed and optimized lipid-based nanocarriers for targeted intranasal delivery of lapatinib and ketoconazole; characterized nanoparticles and conducted in vitro drug release and cell uptake studies.</li>
+        <li>Contributed to &ldquo;Preclinical efficacy of TN-1008&rdquo; &mdash; anticancer drug screening, PCR, flow cytometry for gene expression, cell viability, and stemness markers.</li>
+      </ul>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">
+        <span class="tl-period">Jul 2017 &ndash; Aug 2018</span>
+        <span class="tl-org">Radiant Pharmaceuticals Ltd.</span>
+        <span class="tl-loc">Tongi, Bangladesh</span>
+      </div>
+      <div class="tl-role">Development Pharmacist</div>
+      <ul class="tl-bullets">
+        <li>Led formulation development and analytical method development for tablets and oral liquid dosage forms per USP, BP, and ICH guidelines under cGMP &amp; ISO standards.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="sec-header reveal">
+    <div class="sec-eyebrow">Education</div>
+    <h2 class="sec-title">Academic background</h2>
+  </div>
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <span class="edu-badge">PhD &middot; 2024 &middot; GPA 3.88</span>
+      <div class="edu-degree">Doctor of Philosophy</div>
+      <div class="edu-field">Pharmaceutical Engineering</div>
+      <div class="edu-school">Virginia Commonwealth University &mdash; Advisor: Dr. Adam Hawkridge</div>
+      <div class="edu-note">First individual in the nation to earn a PhD in Pharmaceutical Engineering (featured in VCU News)</div>
+    </div>
+    <div class="edu-card">
+      <span class="edu-badge">MS &middot; 2020 &middot; GPA 4.0</span>
+      <div class="edu-degree">Master of Science</div>
+      <div class="edu-field">Pharmaceutical Nanotechnology</div>
+      <div class="edu-school">University of South Florida &mdash; Advisors: Dr. Subhra &amp; Dr. Shyam Mohapatra</div>
+    </div>
+    <div class="edu-card">
+      <span class="edu-badge">M.Pharm &middot; 2019 &middot; GPA 3.69</span>
+      <div class="edu-degree">Master of Pharmacy</div>
+      <div class="edu-field">Pharmaceutical Chemistry</div>
+      <div class="edu-school">University of Dhaka, Bangladesh</div>
+    </div>
+    <div class="edu-card">
+      <span class="edu-badge">B.Pharm &middot; 2017 &middot; GPA 3.68</span>
+      <div class="edu-degree">Bachelor of Pharmacy (5-year Professional)</div>
+      <div class="edu-field">Pharmacy</div>
+      <div class="edu-school">University of Dhaka, Bangladesh &mdash; WES: 3.8</div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="sec-header reveal">
+    <div class="sec-eyebrow">Publications</div>
+    <h2 class="sec-title">Peer-reviewed research</h2>
+  </div>
+  <div class="pub-list reveal">
+
+    <div class="pub-item">
+      <div class="pub-num">1</div>
+      <div class="pub-body">
+        <div class="pub-title">Neutrophil elastase targets select proteins on human blood monocyte-derived macrophage cell surfaces.</div>
+        <div class="pub-authors">Ahmed, N. T., Kummarapurugu, A. B., Zheng, S., Bulut, G., Kang, L., Batheja, A., Hawkridge, A., &amp; Voynow, J. A.</div>
+        <div class="pub-journal">International Journal of Molecular Sciences, 2024</div>
+        <span class="pub-tag published">Published</span>
+        <a href="https://doi.org/10.3390/ijms252313038" target="_blank" class="pub-doi">DOI &rarr;</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-num">2</div>
+      <div class="pub-body">
+        <div class="pub-title">Decoding Oligonucleotide Stereochemistry: Unexpected Disconnect Between Individual Phosphorothioate Configuration Ratios and Intact Sequence Diastereomeric Composition.</div>
+        <div class="pub-authors">Islam, M.R., Ahmed, N.T., Yoon, L., Afon, N.D., Zhang, D., Liang, L., Sommers, C., Rodriguez, J.D., Wang, Y., Chia, E-S., Yang, K.</div>
+        <div class="pub-journal">Analytical Chemistry</div>
+        <span class="pub-tag submitted">Under Review</span>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-num">3</div>
+      <div class="pub-body">
+        <div class="pub-title">Synergistic antibacterial action of AgNP-ampicillin conjugates: Evading &beta;-lactamase degradation in ampicillin-resistant clinical isolates.</div>
+        <div class="pub-authors">Ayubee, M. S., Akter, F., Ahmed, N. T. et al.</div>
+        <div class="pub-journal">PLoS One, 20(9): e0331669, 2025</div>
+        <span class="pub-tag published">Published</span>
+        <a href="https://doi.org/10.1371/journal.pone.0331669" target="_blank" class="pub-doi">DOI &rarr;</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-num">4</div>
+      <div class="pub-body">
+        <div class="pub-title">Chapter 11 &mdash; STING Pathway and Modulation for Cancer Immunotherapy.</div>
+        <div class="pub-authors">Su, T., Ahmed, N. T., Zhou, S., Liu, X., &amp; Zhu, G.</div>
+        <div class="pub-journal">Cancer Immunology and Immunotherapy, Academic Press, 2022</div>
+        <span class="pub-tag published">Published</span>
+        <a href="https://doi.org/10.1016/B978-0-12-823397-9.00011-9" target="_blank" class="pub-doi">DOI &rarr;</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-num">5</div>
+      <div class="pub-body">
+        <div class="pub-title">Cytotoxic Compounds Derived from Marine Algicolous and Spongicolous Endophytic Fungi: A Review.</div>
+        <div class="pub-authors">Ahmed, N. T., Noor, S., Rahman, M. M., &amp; Mazid, M. A.</div>
+        <div class="pub-journal">Dhaka University Journal of Pharmaceutical Sciences, 20(2), 247&ndash;265, 2021</div>
+        <span class="pub-tag published">Published</span>
+        <a href="https://doi.org/10.3329/dujps.v20i2.57175" target="_blank" class="pub-doi">DOI &rarr;</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-num">6</div>
+      <div class="pub-body">
+        <div class="pub-title">Advances in Translational Nanotechnology: Challenges and Opportunities.</div>
+        <div class="pub-authors">Mohapatra, S. S., Frisina, R. D., Mohapatra, S., ... Ahmed, N. T. et al.</div>
+        <div class="pub-journal">Applied Sciences, 10(14), 4881, 2020</div>
+        <span class="pub-tag published">Published</span>
+        <a href="https://doi.org/10.3390/app10144881" target="_blank" class="pub-doi">DOI &rarr;</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-num">7</div>
+      <div class="pub-body">
+        <div class="pub-title">Synthesis and Functional Evaluation of Nanoparticle Conjugated Antibiotics.</div>
+        <div class="pub-authors">Ahmed, N. T. &amp; Mazid, M. A.</div>
+        <div class="pub-journal">New Biotechnology, 44, S95&ndash;S96, 2018</div>
+        <span class="pub-tag published">Published</span>
+        <a href="https://doi.org/10.1016/J.NBT.2018.05.960" target="_blank" class="pub-doi">DOI &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PRESENTATIONS -->
+  <div class="sec-eyebrow reveal" style="margin-top:2.5rem">Conference Presentations</div>
+  <div class="pres-list reveal">
+    <div class="pres-item">
+      <div class="pres-year">2025</div>
+      <div class="pres-body">
+        <div class="pres-title">Analytical Procedure Development and Validation of High-throughput ZipChip CZE-MS Method for Quantitative Oligonucleotide Analysis</div>
+        <div class="pres-venue">ASMS 2025, Baltimore, MD &amp; FDA Generic Drug Science Day (GDSD) 2025, Silver Spring, MD</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-year">2025</div>
+      <div class="pres-body">
+        <div class="pres-title">Characterization of Phosphorothioate Diastereomers in Synthetic Oligonucleotides Using High-Resolution Ion Mobility-Mass Spectrometry (HRIM-MS)</div>
+        <div class="pres-venue">ASMS 2025, Baltimore, MD &amp; FDA GDSD 2025, Silver Spring, MD</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-year">2025</div>
+      <div class="pres-body">
+        <div class="pres-title">Neutrophil elastase targets select proteins on human blood monocyte derived macrophage cell surfaces</div>
+        <div class="pres-venue">Pediatric Academic Societies Meeting 2025</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-year">2019</div>
+      <div class="pres-body">
+        <div class="pres-title">Lapatinib and Ketoconazole Combination Therapy using Lipid Micelle Nanoparticles for Treatment of Lung Cancer</div>
+        <div class="pres-venue">NanoFlorida 2019</div>
+      </div>
+    </div>
+    <div class="pres-item">
+      <div class="pres-year">2018</div>
+      <div class="pres-body">
+        <div class="pres-title">Endophytic Fungal Metabolites Arrest Cell Cycle of Acute Leukemia Cells</div>
+        <div class="pres-venue">IUBMB Conference, Seoul, South Korea (Travel Grant Awardee)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-header reveal">
+    <div class="sec-eyebrow">Skills</div>
+    <h2 class="sec-title">Technical expertise</h2>
+  </div>
+  <div class="skills-grid reveal">
+    <div class="skill-group">
+      <div class="sg-title">Mass Spectrometry Platforms</div>
+      <div class="sg-tags">
+        <span class="sg-tag">SCIEX Triple Quad 6500+</span>
+        <span class="sg-tag">Orbitrap Fusion Lumos</span>
+        <span class="sg-tag">Q Exactive HF-X</span>
+        <span class="sg-tag">Waters Cyclic IMS-QTOF</span>
+        <span class="sg-tag">MOBILion-Agilent 6545XT</span>
+        <span class="sg-tag">ZipChip CE-MS</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-title">Bioanalytical Methods</div>
+      <div class="sg-tags">
+        <span class="sg-tag">LC-MS/MS</span>
+        <span class="sg-tag">IP-RPLC-MS</span>
+        <span class="sg-tag">HILIC-MS</span>
+        <span class="sg-tag">CE-MS</span>
+        <span class="sg-tag">Ion Mobility-MS</span>
+        <span class="sg-tag">HRIM-MS</span>
+        <span class="sg-tag">HPLC-UV</span>
+        <span class="sg-tag">SDS-PAGE / WB</span>
+        <span class="sg-tag">UV-Vis / IR</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-title">Sample Preparation</div>
+      <div class="sg-tags">
+        <span class="sg-tag">Protein Precipitation</span>
+        <span class="sg-tag">SPE</span>
+        <span class="sg-tag">Liquid-Liquid Extraction</span>
+        <span class="sg-tag">Affinity Capture</span>
+        <span class="sg-tag">Hamilton Nimbus</span>
+        <span class="sg-tag">Microlab STAR</span>
+        <span class="sg-tag">KingFisher</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-title">Proteomics &amp; Bioinformatics</div>
+      <div class="sg-tags">
+        <span class="sg-tag">Label-free Quantitation</span>
+        <span class="sg-tag">SILAC</span>
+        <span class="sg-tag">TMT</span>
+        <span class="sg-tag">Peptide Mapping</span>
+        <span class="sg-tag">PTM Analysis</span>
+        <span class="sg-tag">Glycan Profiling</span>
+        <span class="sg-tag">GSEA</span>
+        <span class="sg-tag">gProfiler</span>
+        <span class="sg-tag">Cytoscape</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-title">Software &amp; Informatics</div>
+      <div class="sg-tags">
+        <span class="sg-tag">SCIEX Analyst / OS</span>
+        <span class="sg-tag">Xcalibur</span>
+        <span class="sg-tag">Chromeleon</span>
+        <span class="sg-tag">MassHunter</span>
+        <span class="sg-tag">BioPharma Finder</span>
+        <span class="sg-tag">Proteome Discoverer</span>
+        <span class="sg-tag">Skyline</span>
+        <span class="sg-tag">Byonic</span>
+        <span class="sg-tag">SciNote ELN</span>
+        <span class="sg-tag">STARLIMS</span>
+        <span class="sg-tag">Watson LIMS</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-title">Computational &amp; Statistical</div>
+      <div class="sg-tags">
+        <span class="sg-tag">R Programming</span>
+        <span class="sg-tag">Python</span>
+        <span class="sg-tag">JMP / DOE</span>
+        <span class="sg-tag">Berkeley Madonna</span>
+        <span class="sg-tag">GastroPlus</span>
+        <span class="sg-tag">PBPK Modeling</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-title">Regulatory &amp; Compliance</div>
+      <div class="sg-tags">
+        <span class="sg-tag">GLP / GxP</span>
+        <span class="sg-tag">FDA BMV Guidance</span>
+        <span class="sg-tag">ALCOA+</span>
+        <span class="sg-tag">ICH Guidelines</span>
+        <span class="sg-tag">SOP Authoring</span>
+        <span class="sg-tag">Method Validation</span>
+        <span class="sg-tag">cGMP / ISO</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="sg-title">Laboratory &amp; Cell Biology</div>
+      <div class="sg-tags">
+        <span class="sg-tag">Cell Culture</span>
+        <span class="sg-tag">ELISA</span>
+        <span class="sg-tag">Flow Cytometry</span>
+        <span class="sg-tag">qRT-PCR</span>
+        <span class="sg-tag">Confocal Microscopy</span>
+        <span class="sg-tag">IHC</span>
+        <span class="sg-tag">DLS</span>
+        <span class="sg-tag">SEM / TEM</span>
+        <span class="sg-tag">siRNA / Transfection</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONORS -->
+<section id="honors">
+  <div class="sec-header reveal">
+    <div class="sec-eyebrow">Honors &amp; Leadership</div>
+    <h2 class="sec-title">Recognition &amp; service</h2>
+  </div>
+  <div class="honors-list reveal">
+    <div class="honor-item"><div class="honor-icon">&#9733;</div><div><div class="honor-name">Excellence in Pharmaceutical Engineering Award</div><div class="honor-org">School of Pharmacy, Virginia Commonwealth University &mdash; 2023</div></div></div>
+    <div class="honor-item"><div class="honor-icon">&#9733;</div><div><div class="honor-name">Excellence in Student Research &mdash; Preclinical Efficacy of TN-1008</div><div class="honor-org">Florida High Tech Corridor Council Matching Grants Research Program &mdash; 2020</div></div></div>
+    <div class="honor-item"><div class="honor-icon">&#9733;</div><div><div class="honor-name">National Science and Technology Fellowship for Master&rsquo;s Research</div><div class="honor-org">Ministry of Science and Technology, Bangladesh &mdash; 2018</div></div></div>
+    <div class="honor-item"><div class="honor-icon">&#9992;</div><div><div class="honor-name">Travel Grant Awardee &mdash; IUBMB Conference, Seoul, South Korea</div><div class="honor-org">International Union of Biochemistry and Molecular Biology &mdash; 2018</div></div></div>
+    <div class="honor-item"><div class="honor-icon">&#127942;</div><div><div class="honor-name">Best Poster Award (1st Place)</div><div class="honor-org">North South University Pharma Fest &mdash; 2018</div></div></div>
+    <div class="honor-item"><div class="honor-icon">&#127942;</div><div><div class="honor-name">Best Poster Award (2nd Place)</div><div class="honor-org">ISE SFEC National Conference, Dhaka, Bangladesh</div></div></div>
+  </div>
+
+  <div class="sec-eyebrow reveal" style="margin-top:2.5rem">Leadership &amp; Service</div>
+  <div class="lead-grid reveal">
+    <div class="lead-card"><div class="lead-role">Judge &mdash; Virginia Junior Academy of Science Research Symposium</div><div class="lead-org">VJAS</div><div class="lead-period">2023, 2025</div></div>
+    <div class="lead-card"><div class="lead-role">Abstract Reviewer &mdash; National Biotechnology Conference</div><div class="lead-org">American Association of Pharmaceutical Scientists (AAPS)</div><div class="lead-period">2025</div></div>
+    <div class="lead-card"><div class="lead-role">Founding President &mdash; Pharmaceutical Engineering Graduate Student Assoc.</div><div class="lead-org">Virginia Commonwealth University</div><div class="lead-period">2021&ndash;2023</div></div>
+    <div class="lead-card"><div class="lead-role">Treasurer &mdash; Pharmaceutics Graduate Student Association</div><div class="lead-org">Virginia Commonwealth University</div><div class="lead-period">2020&ndash;2021</div></div>
+    <div class="lead-card"><div class="lead-role">Student Advisor &mdash; VCU Health Science Library Advisory Committee</div><div class="lead-org">Virginia Commonwealth University</div><div class="lead-period">2021&ndash;2022</div></div>
+    <div class="lead-card"><div class="lead-role">Secretary &mdash; New Advancements in Nanotechnology Org. (NANO)</div><div class="lead-org">University of South Florida</div><div class="lead-period">2019&ndash;2020</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-layout">
+    <div class="reveal">
+      <div class="sec-eyebrow">Contact</div>
+      <div class="contact-heading">Let&rsquo;s <em>connect</em> &amp; collaborate.</div>
+      <p class="contact-intro">Open to research collaborations, speaking invitations, and scientific discussions. Based in Ashland, Ohio.</p>
+      <div class="contact-items">
+        <div class="citem"><span class="clabel">EMAIL</span><a href="mailto:nadiatasnimahmed879@gmail.com">nadiatasnimahmed879@gmail.com</a></div>
+        <div class="citem"><span class="clabel">PHONE</span><a href="tel:+18134055652">+1 (813) 405-5652</a></div>
+        <div class="citem"><span class="clabel">LOCATION</span><span>Ashland, Ohio, USA</span></div>
+        <div class="citem"><span class="clabel">WEBSITE</span><a href="https://nadiatasnimahmed.netlify.app" target="_blank">nadiatasnimahmed.netlify.app</a></div>
+        <div class="citem"><span class="clabel">in</span><a href="https://linkedin.com/in/nadia-tasnim-ahmed" target="_blank">linkedin.com/in/nadia-tasnim-ahmed</a></div>
+        <div class="citem"><span class="clabel">SCHOLAR</span><a href="https://scholar.google.com/citations?user=83E2y6QAAAAJ" target="_blank">Google Scholar Profile</a></div>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:0.1s">
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <div class="form-2col">
+          <div class="fg"><label class="fl" for="fn">Name</label><input class="fi" type="text" id="fn" placeholder="Your name" required/></div>
+          <div class="fg"><label class="fl" for="fe">Email</label><input class="fi" type="email" id="fe" placeholder="you@email.com" required/></div>
+        </div>
+        <div class="fg"><label class="fl" for="fs">Subject</label><input class="fi" type="text" id="fs" placeholder="Research collaboration / Speaking / Other"/></div>
+        <div class="fg"><label class="fl" for="fm">Message</label><textarea class="ft" id="fm" placeholder="Describe your inquiry..." required></textarea></div>
+        <button type="submit" class="fsub" id="fsb">Send Message &rarr;</button>
+      </form>
+    </div>
+  </div>
+</section>
+</div><!-- /page-wrap -->
+
+<footer>
+  <span class="fc">&copy; 2025 Nadia Tasnim Ahmed, PhD &middot; All rights reserved</span>
+  <div class="fl-links">
+    <a href="https://scholar.google.com/citations?user=83E2y6QAAAAJ" target="_blank">Scholar</a>
+    <a href="https://www.researchgate.net/profile/Nadia-Tasnim-Ahmed" target="_blank">ResearchGate</a>
+    <a href="https://linkedin.com/in/nadia-tasnim-ahmed" target="_blank">LinkedIn</a>
+    <a href="https://github.com/ahmedn12" target="_blank">GitHub</a>
+    <a href="uploads/2024_11_Academic CV_Nadia_v2.pdf" download>Download CV</a>
+  </div>
+</footer>
+
+<script>
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme",t);
+  localStorage.setItem("theme",t);
+  document.querySelectorAll(".theme-btn").forEach(b=>{
+    b.classList.toggle("active",b.dataset.t===t);
+  });
+}
+(function(){
+  const saved=localStorage.getItem("theme")||"dark";
+  setTheme(saved);
+})();
+
+const reveals=document.querySelectorAll(".reveal");
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in")});
+},{threshold:0.08});
+reveals.forEach(r=>ro.observe(r));
+
+const secs=document.querySelectorAll("section[id]");
+const nas=document.querySelectorAll(".nav-center a");
+window.addEventListener("scroll",()=>{
+  let cur="";
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id});
+  nas.forEach(a=>{
+    const href=a.getAttribute("href");
+    a.classList.toggle("active",href==="#"+cur);
+  });
+},{passive:true});
+
+function handleForm(e){
+  e.preventDefault();
+  const btn=document.getElementById("fsb");
+  btn.textContent="Sent ✓";btn.style.background="var(--teal)";
+  setTimeout(()=>{btn.textContent="Send Message →";btn.style.background="";e.target.reset();},3000);
+}
+</script>
+</body>
+</html>
